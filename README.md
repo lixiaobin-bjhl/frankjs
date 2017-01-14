@@ -1,6 +1,6 @@
 # vue-component
 * vue2组件系列
-* audioPlayer 音频播放器
+* [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放器
 
 
 ### contact
