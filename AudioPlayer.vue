@@ -217,8 +217,6 @@
 	    border-radius: 23px;
 	    padding: 0 15px;
 	    box-sizing: border-box;
-	    max-width: 200px;
-	    min-width: 85px;
 
 	    .icon-wave-right {
 	        margin-right: 0.7rem;
