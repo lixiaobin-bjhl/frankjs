@@ -3,7 +3,7 @@
 * [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放器，支持播放倒计时，播放动画，动态显示音频宽度。
 * [edtior](https://github.com/lixiaobin-bjhl/vue-component/blob/master/Editor.vue) 基于wangEditor富文本编辑器。
 
-    ####参数
+    #### 参数
     
     | 参数 | 说明 | 默认值 |
     | --- | --- | --- |
@@ -11,7 +11,7 @@
     | height| 编辑器的高度 | 500px |
     | uploadUrl| 上传图片的url | "" |
     
-    ####事件
+    #### 事件
     * change 编辑器内容发生变化
 
 ### contact
