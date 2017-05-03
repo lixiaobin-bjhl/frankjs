@@ -1,6 +1,17 @@
 # vue-component
 * vue2组件系列
-* [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放器，支持播放倒计时，播放动画，动态显示音频宽度。
+* [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放
+* 器，支持播放倒计时，播放动画，动态显示音频宽度。
+
+    | 参数 | 说明 | 默认值 |
+    | --- | --- | --- |
+    | seconds | 播放时长 | 无 |
+    | url | 音频地址 | 无 |
+    | maxWitdth | 播放器显示最大宽度 | 200px |
+    | minWitdth | 播放器显示最小宽度 | 85px |
+
+-------
+
 * [edtior](https://github.com/lixiaobin-bjhl/vue-component/blob/master/Editor.vue) 基于wangEditor富文本编辑器。
 
     #### 参数
