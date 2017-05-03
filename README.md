@@ -1,5 +1,5 @@
 # vue-component
-* vue2组件系列
+### vue2组件
 * [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放
 * 器，支持播放倒计时，播放动画，动态显示音频宽度。
 
