@@ -24,6 +24,8 @@
     
     #### 事件
     * change 编辑器内容发生变化
+-------
+
 * [upload](https://github.com/lixiaobin-bjhl/vue-component/blob/master/Upload.vue) 文件上传器
     #### 参数
     
@@ -33,7 +35,7 @@
     | multiple| 是否支持可文件上传| false |
     
     #### 事件
-    * change 编辑器内容发生变化
+    * change 选择文件发生变化
 
 ### contact
 
