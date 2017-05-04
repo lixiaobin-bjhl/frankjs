@@ -1,5 +1,5 @@
 # vue-component
-### vue2组件
+### component
 * [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放
 * 器，支持播放倒计时，播放动画，动态显示音频宽度。
 
@@ -36,6 +36,44 @@
     
     #### 事件
     * change 选择文件发生变化
+    
+### filter
+* compressImage 七牛云图片裁剪，参数见function中compressImage
+* currency 将数字格式化成人民币形式
+
+| 参数 | 说明 | 默认值 
+| --- | --- | --- |
+| value | 需要格式化成货币的数字 | 无 |
+-------
+* date 格式化时间
+
+| 参数 | 说明 | 默认值 
+| --- | --- | --- |
+| value | 日期或者时间戳 | 无 |
+| pattern | 时间格式，如(yyyy-MM-dd) | 无 |
+
+
+### function
+* compressImage 根据七牛云存储key获取裁剪后图片的URL（考虑retina屏）
+
+| 参数 | 说明 | 默认值 |
+| --- | --- | --- |
+|  storageId| 七牛云存储ID  | 无 |
+|  option.width| 裁剪宽度，若没指定，则按高度等比计划宽度  | 无 |
+|  option.height| 裁剪高度，若没指定，则按宽度等比计划高度  | 无 |
+-------
+* indexBy 返回中数组以指定属性为key组成的map
+
+| 参数 | 说明 | 默认值 |
+| --- | --- | --- |
+|  array | 要生成map的数组  | 无 |
+|  key | 生成map的key（注意key是数组中的某个属性，类型是number或string）  | 无 |
+-------
+* redirect 页面跳转
+
+| 参数 | 说明 | 默认值 |
+| --- | --- | --- |
+| url | 跳转URL  | 无 |     
 
 ### contact
 
