@@ -10,8 +10,6 @@
     | maxWitdth | 播放器显示最大宽度 | 200px |
     | minWitdth | 播放器显示最小宽度 | 85px |
 
--------
-
 * [edtior](https://github.com/lixiaobin-bjhl/vue-component/blob/master/Editor.vue) 基于wangEditor富文本编辑器。
 
     #### 参数
@@ -24,7 +22,6 @@
     
     #### 事件
     * change 编辑器内容发生变化
--------
 
 * [upload](https://github.com/lixiaobin-bjhl/vue-component/blob/master/Upload.vue) 文件上传器
     #### 参数
@@ -44,7 +41,7 @@
 | 参数 | 说明 | 默认值 
 | --- | --- | --- |
 | value | 需要格式化成货币的数字 | 无 |
--------
+
 * date 格式化时间
 
 | 参数 | 说明 | 默认值 
@@ -61,14 +58,14 @@
 |  storageId| 七牛云存储ID  | 无 |
 |  option.width| 裁剪宽度，若没指定，则按高度等比计划宽度  | 无 |
 |  option.height| 裁剪高度，若没指定，则按宽度等比计划高度  | 无 |
--------
+
 * indexBy 返回中数组以指定属性为key组成的map
 
 | 参数 | 说明 | 默认值 |
 | --- | --- | --- |
 |  array | 要生成map的数组  | 无 |
 |  key | 生成map的key（注意key是数组中的某个属性，类型是number或string）  | 无 |
--------
+
 * redirect 页面跳转
 
 | 参数 | 说明 | 默认值 |
