@@ -73,7 +73,28 @@
 
 | 参数 | 说明 | 默认值 |
 | --- | --- | --- |
-| url | 跳转URL  | 无 |     
+| url | 跳转URL  | 无 | 
+* encodeHTML 将html字符转化成转义字符
+
+| 参数 | 说明 | 默认值 |
+| --- | --- | --- |
+| source | html源  | 无 |  
+* isEmpty 判断一个对象是否为空对象
+
+| 参数 | 说明 | 默认值 |
+| --- | --- | --- |
+| obj | 要判断的对象 | 无 |  
+
+### middelware
+
+| 名称 | 说明 | 备注 |
+| --- | --- | --- |
+|  access_permission | 业务权限判断 |  |
+|  is_admin | 登录权限判断 |  |
+| gzip | gzip压缩 |  |
+| response_time | 请求所需时长 | 毫秒为单位 |
+| webpack | 请求文件使用webpack处理 |  |
+ 
 
 ### contact
 
