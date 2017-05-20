@@ -91,6 +91,13 @@
 | gzip | gzip压缩 |  |
 | response_time | 请求所需时长 | 毫秒为单位 |
 | webpack | 请求文件使用webpack处理 |  |
+
+### util
+
+| 名称 | 说明 | 备注 |
+| --- | --- | --- |
+| service | 基于axios的请求封装 |  |
+
  
 
 ### contact
