@@ -1,4 +1,11 @@
-# vue-component
+#js-library
+js-libary 是 [lixiaobin](https://github.com/lixiaobin-bjhl)在开发[charity](https://github.com/lixiaobin-bjhl/charity)和 [arhat](https://github.com/lixiaobin-bjhl/arhat) 项目过程中的常用资源的整体，主要内容有：
+
+* vue组件、过滤器、指令以及egg.js中的插件、中间件等
+* wepy小程序组件
+* egg.js插件、中间件等
+* js、css中常用的资源收集
+
 ### component
 * [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放
 * 器，支持播放倒计时，播放动画，动态显示音频宽度。
