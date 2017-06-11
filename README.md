@@ -41,6 +41,12 @@ frankfe 是 [lixiaobin](https://github.com/lixiaobin-bjhl)在开发[charity](htt
     #### 事件
     * change 选择文件发生变化
     
+* loadingProgress 网站顶部彩色进度条
+
+ | 参数 | 说明 | 默认值 |
+ | --- | --- | --- |
+ |shown | 上传accpet设置 | image/* |
+    
 ### filter
 * compressImage 七牛云图片裁剪，参数见function中compressImage
 * currency 将数字格式化成人民币形式
