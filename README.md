@@ -8,7 +8,7 @@ frankfe 是 [lixiaobin](https://github.com/lixiaobin-bjhl)在开发[charity](htt
 
 
 ### 组件示例截图
-* 微信audioPlayer.vue
+* 访微信[audioPlayer.vue](https://github.com/lixiaobin-bjhl/frankjs/blob/master/demo/audioPlayer.jpg)
 
 ### component
 * [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放
