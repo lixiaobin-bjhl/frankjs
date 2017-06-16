@@ -20,7 +20,7 @@
 <script>
 	export default {
 		// 音频秒数, 音频url, 音频显示最大宽度、音频显示最小宽度
-		props: ['seconds', 'url', 'maxWidth', 'minWidth'],
+		props: ['seconds', 'url',  'maxWidth', 'minWidth'],
 		data () {
 			return {
 				audio: null,
@@ -37,7 +37,7 @@
 		},
 		computed: {
 			audios () {
-				return this.$store.state.audios || [];
+				return this.$store ? this.$store.state.audios : []
 			}
 		},
 		mounted () {
@@ -114,8 +114,9 @@
 			 */
 			init () {
 				var url = this.url;
-				var $audio = $('<audio preload="none" volume="1.0" src="' + url + '"></audio>');
-				var audio = this.audio = $audio[0];
+				var audio = document.createElement('audio');
+				audio.src = url;
+				this.audio = audio;
 
 		        audio
 		            .addEventListener('ended', ()=>{
@@ -130,7 +131,9 @@
 		        	});
 
 		        // 当前播放音频，会影响到其它音频，比例当前视频播放，其它视频要暂停，这里先用vuex管理
-		        this.$store.dispatch('addAudio', this);
+				if (this.$store) {
+			        this.$store.dispatch('addAudio', this);
+				}
 			}
 		},
 		beforeDestroy() {

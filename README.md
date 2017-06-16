@@ -6,6 +6,10 @@ frankfe 是 [lixiaobin](https://github.com/lixiaobin-bjhl)在开发[charity](htt
 * egg.js插件、中间件等
 * js、css中常用的资源收集
 
+
+### 组件示例截图
+* 微信audioPlayer.vue
+
 ### component
 * [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放
 * 器，支持播放倒计时，播放动画，动态显示音频宽度。

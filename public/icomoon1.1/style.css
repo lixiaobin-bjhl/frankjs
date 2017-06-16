@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ktyiwv');
+  src:  url('fonts/icomoon.eot?ktyiwv#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ktyiwv') format('truetype'),
+    url('fonts/icomoon.woff?ktyiwv') format('woff'),
+    url('fonts/icomoon.svg?ktyiwv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wechat:before {
+  content: "\e900";
+}
+.icon-wave-right:before {
+  content: "\e901";
+}
+.icon-username:before {
+  content: "\e902";
+}
+.icon-up:before {
+  content: "\e903";
+}
+.icon-todoReminder:before {
+  content: "\e904";
+}
+.icon-times:before {
+  content: "\e905";
+}
+.icon-student:before {
+  content: "\e906";
+}
+.icon-star-on:before {
+  content: "\e907";
+}
+.icon-star-off:before {
+  content: "\e908";
+}
+.icon-shezhi:before {
+  content: "\e909";
+}
+.icon-shangkejilu:before {
+  content: "\e90a";
+}
+.icon-right:before {
+  content: "\e90b";
+}
+.icon-report:before {
+  content: "\e90c";
+}
+.icon-question-circle:before {
+  content: "\e90d";
+}
+.icon-qrcode:before {
+  content: "\e90e";
+}
+.icon-phone:before {
+  content: "\e90f";
+}
+.icon-people:before {
+  content: "\e910";
+}
+.icon-people-new:before {
+  content: "\e911";
+}
+.icon-password:before {
+  content: "\e912";
+}
+.icon-mic:before {
+  content: "\e913";
+}
+.icon-male:before {
+  content: "\e914";
+}
+.icon-mail:before {
+  content: "\e915";
+}
+.icon-location:before {
+  content: "\e916";
+}
+.icon-location-new:before {
+  content: "\e917";
+}
+.icon-left:before {
+  content: "\e918";
+}
+.icon-kecheng:before {
+  content: "\e919";
+}
+.icon-kebiao:before {
+  content: "\e91a";
+}
+.icon-jiaowu:before {
+  content: "\e91b";
+}
+.icon-index:before {
+  content: "\e91c";
+}
+.icon-iconkebiao:before {
+  content: "\e91d";
+}
+.icon-iconbanji:before {
+  content: "\e91e";
+}
+.icon-homework:before {
+  content: "\e91f";
+}
+.icon-finance:before {
+  content: "\e920";
+}
+.icon-female:before {
+  content: "\e921";
+}
+.icon-empty:before {
+  content: "\e922";
+}
+.icon-down:before {
+  content: "\e923";
+}
+.icon-details:before {
+  content: "\e924";
+}
+.icon-delete:before {
+  content: "\e925";
+}
+.icon-contract:before {
+  content: "\e926";
+}
+.icon-comment:before {
+  content: "\e927";
+}
+.icon-clue:before {
+  content: "\e928";
+}
+.icon-circle-up:before {
+  content: "\e929";
+}
+.icon-circle-edit:before {
+  content: "\e92a";
+}
+.icon-circle-down:before {
+  content: "\e92b";
+}
+.icon-call:before {
+  content: "\e92c";
+}
+.icon-btn-delete:before {
+  content: "\e92d";
+}
+.icon-btn_add:before {
+  content: "\e92e";
+}
+.icon-bt-edit:before {
+  content: "\e92f";
+}
+.icon-bt_xiajia:before {
+  content: "\e930";
+}
+.icon-bt_shangjia:before {
+  content: "\e931";
+}
+.icon-bianji:before {
+  content: "\e932";
+}
+.icon-arrowright:before {
+  content: "\e933";
+}
+.icon-alipay:before {
+  content: "\e934";
+}
+.icon-address:before {
+  content: "\e935";
+}
+
