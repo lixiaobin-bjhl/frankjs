@@ -1,15 +1,18 @@
 <!--
-    @file 音频播放器
+    @file 语音播放器
     @author XiaoBin Li(lixiaobin@baijiahulian.com)
 -->
 
 <template>
 	<div class="audio-player" :style="{width: calcWidth() + 'px'}" :class="{playing: status==1}" @click="run">
 		<div v-if="!loading">
-			<i class="icon-wave-right"></i>
+			<i class="control-btn"></i>
 			<span class="audio-length">
-				{{Math.floor(this.timerSeconds / 60) + '\'' + this.timerSeconds % 60}}
+				{{Math.floor(this.timerSeconds / 60) + '\'' + Math.round(this.timerSeconds % 60)}}
 			</span>
+            <div class="progress">
+                <div class="ball" :style="{'left': progressLeft}"></div>
+            </div>
 		</div>
 		<div v-if="loading">
 			下载中...
@@ -32,7 +35,9 @@
 				status: 0,
 				timer: null,
 				// prop中的seconds不能修改，这里存一份，用来倒计划，并且不要影响到原始时长
-				timerSeconds: this.seconds
+				timerSeconds: this.seconds,
+				// 初如进度条的位置
+                progressLeft: '0%'
 			};
 		},
 		computed: {
@@ -44,12 +49,23 @@
 			this.init();
 		},
 		methods: {
+            /**
+             * 计算进度条位值 
+             */
+            calcProgress () {
+                var audio = this.audio;
+                this.progressLeft = audio.currentTime * 100 / audio.duration + '%';
+                this.timerSeconds = audio.duration - audio.currentTime;
+            },
 			/**
 			 * 播放倒计时
 			 */
 			countDown() {
-				this.timerSeconds --;
+                if (this.timer) {
+                   clearTimeout(this.timer);
+                }
 				this.timer = setTimeout(() => {
+                    this.calcProgress();
 					this.countDown();
 				}, 1000);
 			},
@@ -57,8 +73,8 @@
 			 * 计算宽度
 			 */
 			calcWidth() {
-				var minWidth = this.minWidth || 85;
-				var maxWidth = this.maxWidth || 200;
+				var minWidth = this.minWidth || 200;
+				var maxWidth = this.maxWidth || 450;
 				var seconds = this.seconds;
 
 				// 1.5秒1px
@@ -81,9 +97,7 @@
 				this.audios.forEach((item)=> {
 					item.pause();
 				});
-				setTimeout(() => {
-					this.countDown();
-				}, 1000);
+				this.countDown();
 				this.audio.play();
 				this.status = 1;
 			},
@@ -121,13 +135,13 @@
 		        audio
 		            .addEventListener('ended', ()=>{
 		               	this.status = 0;
+                        clearTimeout(this.timer);
 		            });
 
 		        audio
 		        	.addEventListener('loadeddata', ()=> {
 			            this.isLoaded = true;
 			            this.loading = false;
-			            this.status = 1;
 		        	});
 
 		        // 当前播放音频，会影响到其它音频，比例当前视频播放，其它视频要暂停，这里先用vuex管理
@@ -145,97 +159,71 @@
 </script>
 
 <style lang="scss">
-	@mixin scale($ratio...) {
-	  -webkit-transform: scale($ratio);
-	      -ms-transform: scale($ratio); // IE9 only
-	       -o-transform: scale($ratio);
-	          transform: scale($ratio);
-	}
-	// Animations
-	@mixin animation($animation) {
-	  -webkit-animation: $animation;
-	       -o-animation: $animation;
-	          animation: $animation;
-	}
-	@mixin animation-name($name) {
-	  -webkit-animation-name: $name;
-	          animation-name: $name;
-	}
-	@mixin animation-duration($duration) {
-	  -webkit-animation-duration: $duration;
-	          animation-duration: $duration;
-	}
-	@mixin animation-timing-function($timing-function) {
-	  -webkit-animation-timing-function: $timing-function;
-	          animation-timing-function: $timing-function;
-	}
-	@mixin animation-delay($delay) {
-	  -webkit-animation-delay: $delay;
-	          animation-delay: $delay;
-	}
-	@mixin animation-iteration-count($iteration-count) {
-	  -webkit-animation-iteration-count: $iteration-count;
-	          animation-iteration-count: $iteration-count;
-	}
-	@mixin animation-direction($direction) {
-	  -webkit-animation-direction: $direction;
-	          animation-direction: $direction;
-	}
-	@mixin animation-fill-mode($fill-mode) {
-	  -webkit-animation-fill-mode: $fill-mode;
-	          animation-fill-mode: $fill-mode;
-	}
-	@keyframes playing {
-	    @each $i in 0 25 50 75 100 {
-	        #{$i}% {
-	            @if $i%50 == 0 {
-	                @include scale(0.5);
-	            } @else {
-	                @include scale(1);
-	            }
-	        }
-	    }
-	}
-
-	@-webkit-keyframes playing {
-	    @each $i in 0 25 50 75 100 {
-	        #{$i}% {
-	            @if $i%50 == 0 {
-	                @include scale(0.5);
-	            } @else {
-	                @include scale(1);
-	            }
-	        }
-	    }
-	}
-
+    $voice-brand-color: #36C797;
+    $size: 30px;
 	.audio-player {
 		cursor: pointer;
 		text-align: left;
-	    font-size: 12px;
-	    background: #6EB92C;
-	    color: #fff;
-	    height: 26px;
-	    line-height: 26px;
-	    border-radius: 23px;
-	    padding: 0 15px;
+	    border: 1px solid $voice-brand-color;
+	    height: $size;
+	    line-height: $size;
+	    border-radius: 15px;
 	    box-sizing: border-box;
-
-	    .icon-wave-right {
-	        margin-right: 0.7rem;
-	        display: inline-block;
-	    }
-
+	   
 	    audio {
 	        display: none;
 	    }
-
-	    &.playing {
-	        .icon-wave-right {
-	            @include animation-name(playing);
-	            @include animation-duration(3s);
-	            @include animation-iteration-count(infinite);
-	        }
-	    }
+        .control-btn {
+            width: $size;
+            height: $size;
+            border-radius: 15px;
+            box-sizing: border-box;
+            float: left;
+            position: relative;
+            top: -1px;
+            vertical-align: top;
+            background: $voice-brand-color;
+            &:before {
+                width: 0;
+                height: 0;
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border: 5px solid transparent;
+                border-left: 9px solid #FFF;
+                transform: translate(-30%, -50%);
+            }
+        }
+        &.playing {
+            .control-btn {
+                &:before {
+                    border: 5px solid #FFF;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .audio-length {
+            width: 45px;
+            float: right;
+            color: $voice-brand-color;
+            font-size: 12px;
+        }
+        .progress {
+            height: 2px;
+            margin: 0 55px 0 36px;
+            position: relative;
+            top: 13px;
+            background: #F0F0F0;
+            .ball {
+                width: 8px;
+                height: 8px;
+                background: $voice-brand-color;
+                border-radius: 50%;
+                position: absolute;
+                top: -3px;
+                left: 0;
+            }
+        }
 	}
 </style>

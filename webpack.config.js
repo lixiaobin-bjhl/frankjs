@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         'main': './src/main.js',
         'audioPlayer': './src/audioPlayer.js',
+        'voicePlayer': './src/voicePlayer.js',
     },
     output: {
         path: path.resolve(__dirname, './dist'),
