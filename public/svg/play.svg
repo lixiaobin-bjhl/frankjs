@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="学员档案" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="详情---跟进记录---未触发" transform="translate(-581.000000, -566.000000)" fill="#FFFFFF">
+            <g id="跟进记录" transform="translate(482.000000, 214.000000)">
+                <g id="list/跟进记录" transform="translate(20.000000, 120.000000)">
+                    <g id="列表">
+                        <g id="item-2" transform="translate(0.000000, 152.000000)">
+                            <g id="语音条" transform="translate(68.000000, 70.000000)">
+                                <path d="M17.2479542,11.7418994 L20.7254376,18.5448451 L20.7254376,18.5448451 C20.9768127,19.0366062 20.7819413,19.6390372 20.2901802,19.8904123 C20.1492704,19.9624416 19.9932776,20 19.8350253,20 L12.8800585,20 L12.8800585,20 C12.3277737,20 11.8800585,19.5522847 11.8800585,19 C11.8800585,18.8417477 11.9176169,18.6857549 11.9896462,18.5448451 L15.4671296,11.7418994 L15.4671296,11.7418994 C15.7185047,11.2501383 16.3209357,11.0552669 16.8126968,11.306642 C16.999938,11.4023547 17.1522415,11.5546582 17.2479542,11.7418994 Z" id="icon-play" transform="translate(16.357542, 15.000000) rotate(-270.000000) translate(-16.357542, -15.000000) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

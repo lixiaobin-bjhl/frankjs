@@ -6,7 +6,10 @@
 <template>
 	<div class="audio-player" :style="{width: calcWidth() + 'px'}" :class="{playing: status==1}" @click="run">
 		<div v-if="!loading">
-			<i class="control-btn"></i>
+			<i class="control-btn">
+				<span class="icon-status icon-play" v-if="status==0"></span>
+				<span class="icon-status icon-pause" v-if="status==1"></span>
+			</i>
 			<span class="audio-length">
 				{{Math.floor(this.timerSeconds / 60) + '\'' + Math.round(this.timerSeconds % 60)}}
 			</span>
@@ -167,7 +170,7 @@
 	    border: 1px solid $voice-brand-color;
 	    height: $size;
 	    line-height: $size;
-	    border-radius: 15px;
+	    border-radius: $size / 2;
 	    box-sizing: border-box;
 	   
 	    audio {
@@ -176,32 +179,18 @@
         .control-btn {
             width: $size;
             height: $size;
-            border-radius: 15px;
+            border-radius: $size / 2;
             box-sizing: border-box;
             float: left;
             position: relative;
             top: -1px;
             vertical-align: top;
             background: $voice-brand-color;
-            &:before {
-                width: 0;
-                height: 0;
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                border: 5px solid transparent;
-                border-left: 9px solid #FFF;
-                transform: translate(-30%, -50%);
-            }
-        }
-        &.playing {
-            .control-btn {
-                &:before {
-                    border: 5px solid #FFF;
-                    transform: translate(-50%, -50%);
-                }
-            }
+			text-align: center;
+			font-size: 12px;
+			.icon-status {
+				vertical-align: middle;
+			}
         }
         .audio-length {
             width: 45px;
