@@ -10,9 +10,10 @@ frankfe 是 [lixiaobin](https://github.com/lixiaobin-bjhl)在开发[charity](htt
 ### 组件示例截图
 * 访微信[audioPlayer.vue](https://github.com/lixiaobin-bjhl/frankjs/blob/master/demo/audioPlayer.jpg)
 * 带进度条语音播放器[voicePlayer.vue](https://github.com/lixiaobin-bjhl/frankjs/blob/master/demo/voicePlayer.jpg)
+* 图片预览器[imagePreview.vue](https://github.com/lixiaobin-bjhl/frankjs/blob/master/demo/imagePreview.jpg)
 
 ### component
-* [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/AudioPlayer.vue) 音频播放器，支持播放倒计时，播放动画，动态显示音频宽度。
+* [audioPlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/component/AudioPlayer.vue) 音频播放器，支持播放倒计时，播放动画，动态显示音频宽度。
 
     | 参数 | 说明 | 默认值 |
     | --- | --- | --- |
@@ -21,16 +22,22 @@ frankfe 是 [lixiaobin](https://github.com/lixiaobin-bjhl)在开发[charity](htt
     | maxWitdth | 播放器显示最大宽度 | 200px |
     | minWitdth | 播放器显示最小宽度 | 85px |
  
- * [voicePlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/VoicePlayer.vue) 带进度条语音播放器
+* [voicePlayer](https://github.com/lixiaobin-bjhl/vue-component/blob/master/component/VoicePlayer.vue) 带进度条语音播放器
 
     | 参数 | 说明 | 默认值 |
     | --- | --- | --- |
     | seconds | 播放时长 | 无 |
     | url | 音频地址 | 无 |
     | maxWitdth | 播放器显示最大宽度 | 450px |
-    | minWitdth | 播放器显示最小宽度 | 200px |   
+    | minWitdth | 播放器显示最小宽度 | 200px | 
+    
+* [imagePreview](https://github.com/lixiaobin-bjhl/vue-component/blob/master/component/ImagePreview.vue) 图片预览器
 
-* [edtior](https://github.com/lixiaobin-bjhl/vue-component/blob/master/Editor.vue) 基于wangEditor富文本编辑器。
+    | 参数 | 说明 | 默认值 |
+    | --- | --- | --- |
+    | imgList | 图片列表 | 无 |
+
+* [edtior](https://github.com/lixiaobin-bjhl/vue-component/blob/master/component/Editor.vue) 基于wangEditor富文本编辑器。
 
     #### 参数
     
