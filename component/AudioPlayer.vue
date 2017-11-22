@@ -8,7 +8,7 @@
 		<div v-if="!loading">
 			<i class="icon-wave-right"></i>
 			<span class="audio-length">
-				{{Math.floor(this.timerSeconds / 60) + '\'' + this.timerSeconds % 60}}
+				{{Math.floor(this.timerSeconds / 60) + '\'' + Math.round(this.timerSeconds % 60)}}
 			</span>
 		</div>
 		<div v-if="loading">
