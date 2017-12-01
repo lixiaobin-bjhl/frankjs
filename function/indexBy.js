@@ -1,6 +1,6 @@
 /**
- * @fileOverview chairty-function-indexBy
- * @author XiaoBin Li(lixiaobin8878@gmail.com) 
+ * @file array 按照指字段变成map
+ * @author XiaoBin Li(lixiaobin@baijiahulian.com)
  */
 
 'use strict';

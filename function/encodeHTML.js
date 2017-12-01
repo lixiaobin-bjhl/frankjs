@@ -1,14 +1,12 @@
 /**
  * 对字符串进行 HTML 编码
- * @author XiaoBin Li(lixiaobin8878@gmail.com) 
+ *
+ * @param {string} source 字符串
+ * @return {string}
  */
 
 'use strict';
 
-/** 
- * @param {string} source 字符串
- * @return {string}
- */
 export default function(source) {
     return String(source)
         .replace(/&/g, '&amp;')
