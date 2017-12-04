@@ -1,8 +1,11 @@
 /**
- * 设置视频清晰度
+ * @file 设置视频清晰度
  */
 
 define(function (require, exports) {
+
+    'use strict';
+
     /**
      * 注册清晰度插件
      * 
