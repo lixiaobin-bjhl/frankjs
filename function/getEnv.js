@@ -7,36 +7,36 @@
  * @author peilonghui lixiaobin
  */
 
-'use strict';
+'use strict'
 
-var APP_REGEX = /genshuixue-([^-]+)-(.+)$/i;
+var APP_REGEX = /genshuixue-([^-]+)-(.+)$/i
 
 var ua = {
-	app: {},
-	isApp: false,
-	platform: {}
-};
+  app: {},
+  isApp: false,
+  platform: {}
+}
 
-//var userAgent = 'Mozilla/5.0 (Linux; Android 5.0.1; Nexus 4 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36-GenShuiXue-institution-1.4.0';
-var userAgent = window.navigator.userAgent.toLowerCase();
+// var userAgent = 'Mozilla/5.0 (Linux; Android 5.0.1; Nexus 4 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36-GenShuiXue-institution-1.4.0';
+var userAgent = window.navigator.userAgent.toLowerCase()
 
-var appMatches = userAgent.match(APP_REGEX);
+var appMatches = userAgent.match(APP_REGEX)
 
 if (appMatches && appMatches.length > 1) {
-	ua.isApp = true;
-	ua['app'][appMatches[1]] = appMatches[2];
+  ua.isApp = true
+  ua['app'][appMatches[1]] = appMatches[2]
 }
 
 if (userAgent.indexOf('android') >= 0) {
-	ua.platform.android = true;
+  ua.platform.android = true
 }
 
 if (/ip(hone|od|ad)/img.test(userAgent)) {
-	ua.platform.ios = true;
+  ua.platform.ios = true
 }
 
 export default function () {
-	return {
-		ua: ua
-	};
+  return {
+    ua: ua
+  }
 }

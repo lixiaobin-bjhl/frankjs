@@ -1,6 +1,6 @@
 <!--
     @file 百度地图
-    @author XiaoBin Li(lixiaobin@baijiahulian.com)
+    @author XiaoBin Li(lixiaobin8878@gmail.com)
 -->
 
 <template>

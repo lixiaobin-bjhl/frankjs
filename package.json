@@ -2,7 +2,7 @@
   "name": "frankjs",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "lixiaobin <lixiaobin@baijiahulian.com>",
+  "author": "lixiaobin <lixiaobin8878@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
@@ -28,6 +28,7 @@
     "node-sass": "^4.5.3",
     "photoswipe": "^4.1.2",
     "sass-loader": "^6.0.6",
+    "standard": "^11.0.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "vue-loader": "^12.1.0",

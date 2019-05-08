@@ -1,6 +1,6 @@
 <!--
     @file 语音播放器
-    @author XiaoBin Li(lixiaobin@baijiahulian.com)
+    @author XiaoBin Li(lixiaobin8878@gmail.com)
 -->
 
 <template>

@@ -1,6 +1,6 @@
 <!--
     @file 音频播放器
-    @author XiaoBin Li(lixiaobin@baijiahulian.com)
+    @author XiaoBin Li(lixiaobin8878@gmail.com)
 -->
 
 <template>
@@ -130,7 +130,7 @@
 			            this.status = 1;
 		        	});
 
-		        // 当前播放音频，会影响到其它音频，比例当前视频播放，其它视频要暂停，这里先用vuex管理
+		        // 当前播放音频，会影响到其它音频，比如当前视频播放，其它视频要暂停，这里先用vuex管理
 				if (this.$store) {
 			        this.$store.dispatch('addAudio', this);
 				}

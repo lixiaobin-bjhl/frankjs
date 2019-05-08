@@ -1,10 +1,10 @@
- /**
+/**
  * @file 个位数补0处理
- * @author XiaoBin Li(lixiaobin@baijiahulian.com)
+ * @author XiaoBin Li(lixiaobin8878@gmail.com)
  */
 
-'use strict';
+'use strict'
 
-export default function padZero(value) {
-	return (value < 10 ? '0' : '') + value;
+export default function padZero (value) {
+  return (value < 10 ? '0' : '') + value
 }

@@ -3,31 +3,29 @@
  * @author lixiaobin
  */
 
-'use strict';
+'use strict'
 
-import ImagePlayer from '../component/ImagePlayer';
+import ImagePlayer from '../component/ImagePlayer'
 
 export default function (event) {
+  var target = $(event.currentTarget)
+  var url = target.data('url') || target.data('src')
 
-    var target = $(event.currentTarget);
-    var url = target.data('url') || target.data('src');
+  event.preventDefault()
+  event.stopPropagation()
 
-    event.preventDefault();
-    event.stopPropagation();
+  var imgs = $('.image')
 
-    var imgs = $('.image');
+  var imgArray = []
 
-    var imgArray = [];
+  imgs.each(function () {
+    imgArray.push(
+      this.dataset.url || this.dataset.src
+    )
+  })
 
-    imgs.each(function () {
-        imgArray.push(
-            this.dataset.url || this.dataset.src
-        );
-    });
-
-    new ImagePlayer({
-        datasource: imgArray,
-        current: imgs.index(target)
-    });
+  new ImagePlayer({
+    datasource: imgArray,
+    current: imgs.index(target)
+  })
 }
-

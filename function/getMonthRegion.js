@@ -3,18 +3,17 @@
  * @author SanBaofeng <sanbaofeng@baijiahulian.com>
  */
 
-'use strict';
+'use strict'
 
-import getMonthDays from './getMonthDays';
+import getMonthDays from './getMonthDays'
 
 export default function getMonthRegion (now) {
+  const nowYear = now.getFullYear()
+  const nowMonth = now.getMonth()
+  const nowDay = now.getDate()
 
-   const nowYear = now.getFullYear();
-   const nowMonth = now.getMonth();
-   const nowDay = now.getDate();
-
-   return {
+  return {
    		startDate: new Date(nowYear, nowMonth, 1),
    		endDate: new Date(nowYear, nowMonth, getMonthDays(now))
-   }
+  }
 }

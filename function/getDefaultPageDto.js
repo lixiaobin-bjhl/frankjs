@@ -1,15 +1,15 @@
 /**
  * @file 获取默认的PageDto
- * @author XiaoBin Li(lixiaobin@baijiahulian.com)
+ * @author XiaoBin Li(lixiaobin8878@gmail.com)
  */
 
-'use strict';
+'use strict'
 
 export default function getDefaultPageDto () {
-	return {
-		pageNum: 1,
-		count: 0,
-		pageSize: 10,
-		pageSizes: [10, 20, 50, 100]
-	};
+  return {
+    pageNum: 1,
+    count: 0,
+    pageSize: 10,
+    pageSizes: [10, 20, 50, 100]
+  }
 }

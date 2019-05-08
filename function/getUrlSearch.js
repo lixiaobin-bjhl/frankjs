@@ -1,17 +1,14 @@
 /**
  * @file 获取url search
- * @author XiaoBin Li(lixiaobin@baijiahulian.com)
+ * @author XiaoBin Li(lixiaobin8878@gmail.com)
  */
 
-'use strict';
+'use strict'
 
-let url = require('../util/url');
+let url = require('../util/url')
 
 let getUrlSearch = function () {
-	
-	return url.parseQuery(window.location.href);
-	
-};
+  return url.parseQuery(window.location.href)
+}
 
-export default getUrlSearch;
-
+export default getUrlSearch

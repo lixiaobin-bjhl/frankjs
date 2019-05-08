@@ -1,24 +1,24 @@
 /**
  * @file 根据路径字符串获取对象值
- * @author XiaoBin Li(lixiaobin@baijiahulian.com)
+ * @author XiaoBin Li(lixiaobin8878@gmail.com)
  */
 
-'use strict';
+'use strict'
 
-export default function getPath(object, prop) {
-    prop = prop || '';
-    var paths = prop.split('.');
-    var current = object;
-    var result = null;
-    for (var i = 0, j = paths.length; i < j; i++) {
-        var path = paths[i];
-        if (!current) break;
+export default function getPath (object, prop) {
+  prop = prop || ''
+  var paths = prop.split('.')
+  var current = object
+  var result = null
+  for (var i = 0, j = paths.length; i < j; i++) {
+    var path = paths[i]
+    if (!current) break
 
-        if (i === j - 1) {
-            result = current[path];
-            break;
-        }
-        current = current[path];
+    if (i === j - 1) {
+      result = current[path]
+      break
     }
-    return result;
+    current = current[path]
+  }
+  return result
 }

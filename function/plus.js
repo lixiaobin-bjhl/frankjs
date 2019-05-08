@@ -1,12 +1,12 @@
 /**
  * @file 加法
- * @author XiaoBin Li(lixiaobin@baijiahulian.com)
+ * @author XiaoBin Li(lixiaobin8878@gmail.com)
  */
 
-'use strict';
+'use strict'
 
-import decimalLength from './decimalLength';
-import float2Int from './float2Int';
+import decimalLength from './decimalLength'
+import float2Int from './float2Int'
 
 /**
  * 加法
@@ -16,15 +16,13 @@ import float2Int from './float2Int';
  * @return {number}
  */
 export default function (a, b) {
+  var length = Math.max(
+    decimalLength(a),
+    decimalLength(b)
+  )
 
-    var length = Math.max(
-                    decimalLength(a),
-                    decimalLength(b)
-                );
+  a = float2Int(a, length)
+  b = float2Int(b, length)
 
-    a = float2Int(a, length);
-    b = float2Int(b, length);
-
-    return (a + b) / Math.pow(10, length);
-
+  return (a + b) / Math.pow(10, length)
 };

@@ -3,9 +3,9 @@
  * @author xujin(xujin@baijiahulian.com)
  */
 
-'use strict';
+'use strict'
 
 export default function getOrgId () {
-    var path = window.location.pathname;
-    return path.split('/')[1];
+  var path = window.location.pathname
+  return path.split('/')[1]
 }

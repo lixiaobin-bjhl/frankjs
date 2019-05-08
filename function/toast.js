@@ -3,22 +3,22 @@
  * @author chenwen(chenwen@baijiahulian.com)
  */
 
-'use strict';
+'use strict'
 
-import Vue from 'vue';
-import { Message } from 'element-ui';
+import Vue from 'vue'
+import { Message } from 'element-ui'
 
 export default function toast (msg, option = {}) {
-    let time = 3000;
-    if (!isNaN(option.duration)) {
-        time = option.duration;
-    }
+  let time = 3000
+  if (!isNaN(option.duration)) {
+    time = option.duration
+  }
 
-    var type = typeof option === 'string' ? option : (option.type || 'success');
+  var type = typeof option === 'string' ? option : (option.type || 'success')
 
-    Message({
-        message: msg,
-        type: type,
-        duration: time
-    });
+  Message({
+    message: msg,
+    type: type,
+    duration: time
+  })
 }

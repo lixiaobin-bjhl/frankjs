@@ -1,27 +1,24 @@
 /**
  * @file 获取token
- * @author XiaoBin Li(lixiaobin@baijiahulian.com)
+ * @author XiaoBin Li(lixiaobin8878@gmail.com)
  */
 
-'use strict';
+'use strict'
 
-let url = require('../url');
+let url = require('../url')
 
 let getToken = function () {
-		
-	let search = url.parseQuery(window.location.href);
-	let tokenKey = 'auth_token';
+  let search = url.parseQuery(window.location.href)
+  let tokenKey = 'auth_token'
 
-	if (search.sms_token) {
-		tokenKey = 'sms_token';
-	} 
+  if (search.sms_token) {
+    tokenKey = 'sms_token'
+  }
 
-	return {
-		value: search.sms_token || search.auth_token || '',
-		key: tokenKey
-	};
-	
-};
+  return {
+    value: search.sms_token || search.auth_token || '',
+    key: tokenKey
+  }
+}
 
-export default getToken;
-
+export default getToken
